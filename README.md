@@ -2,22 +2,27 @@
 Highly available three tier architecture of AWS
 
 🔹 Project Highlights
-🌐 Global DNS with Route 53: Efficient routing of user requests to the nearest CloudFront edge location for reduced latency and improved performance.
 
-⚡ Content Delivery with CloudFront: Caches static assets at edge locations, improving load times and reducing origin load.
+🌐 Global DNS with Route 53: Efficiently routes user traffic to the nearest CloudFront edge location for reduced latency.
 
-🌍 External Load Balancer (ALB): Distributes incoming internet traffic across auto-scaled web servers in multiple availability zones.
+⚡ Content Delivery with CloudFront: Serves cached static content from edge locations to enhance speed and availability.
 
-📈 Auto Scaling Group: Automatically scales the Web Tier based on demand to ensure high availability and cost optimization.
+🌍 External Load Balancer (ALB): Distributes incoming internet traffic across web servers in multiple AZs for high availability.
 
-🖥️ Web Tier in Private Subnets: Hosts secure and scalable web servers behind the external load balancer.
+📈 Auto Scaling Group: Dynamically scales the Web Tier based on traffic and performance metrics for cost-efficiency.
 
-🔒 Internal Load Balancer (ALB): Handles communication between the Web Tier and Application Tier in a secure and isolated manner.
+🖥️ Web Tier in Private Subnets: Hosts web servers securely behind the external load balancer with no direct internet access.
 
-🧠 Application Tier: Hosts business logic in private subnets, shielded from public internet exposure.
+🔒 Internal Load Balancer (ALB): Handles secure communication between Web Tier and App Tier.
 
-🗃️ Database Tier: Stores application data in a Multi-AZ RDS setup for durability and fault tolerance.
+🧠 Application Tier: Processes business logic in a secured environment within private subnets.
 
-🚪 VPC Gateway Endpoint for S3: Secure and private access to Amazon S3 without traversing the public internet.
+🗃️ Database Tier: Uses Amazon RDS in Multi-AZ mode for high availability, automated backups, and failover support.
 
-📂 Elastic File System (EFS): Shared storage for EC2 instances across tiers, allowing concurrent access from multiple Availability Zones.
+📂 Elastic File System (EFS): Provides scalable, shared storage for EC2 instances across multiple AZs.
+
+🚪 VPC Gateway Endpoint (S3): Enables private connectivity to Amazon S3 without exposing traffic to the public internet.
+
+📊 CloudWatch Monitoring: Tracks application and infrastructure metrics (CPU, memory, etc.) with custom alarms for performance insights.
+
+📩 SNS Notifications: Sends real-time alerts for CloudWatch alarms and application events to email/SMS for proactive incident response.
