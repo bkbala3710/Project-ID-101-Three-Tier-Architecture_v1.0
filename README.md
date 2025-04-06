@@ -1,7 +1,7 @@
 # Project-ID-101-Three-Tier-Architecture_v1.0
 Highly available three tier architecture of AWS
 
-🔹 Project Highlights
+🔹 ProjectThree tier Application – Key Highlights
 
 🌐 Global DNS with Route 53: Efficiently routes user traffic to the nearest CloudFront edge location for reduced latency.
 
