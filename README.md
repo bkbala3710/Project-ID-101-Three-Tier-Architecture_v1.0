@@ -7,6 +7,7 @@ Highly available three tier architecture of AWS
 
 ⚡ Content Delivery with CloudFront: Serves cached static content from edge locations to enhance speed and availability.
 
+
 🌍 External Load Balancer (ALB): Distributes incoming internet traffic across web servers in multiple AZs for high availability.
 
 📈 Auto Scaling Group: Dynamically scales the Web Tier based on traffic and performance metrics for cost-efficiency.
